@@ -41,7 +41,7 @@ const AddBlogs = () => {
 				navigate('/blogs');
 		})
 		} else {
-			axiosInstane.post('/blog/addblogs',addData).then((res)=>{
+			axiosInstane.post('/api/blog/addblogs',addData).then((res)=>{
 				alert(res.data.message);
 				navigate('/blogs');
 			})
