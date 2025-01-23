@@ -36,12 +36,12 @@ const AddBlogs = () => {
 	},[])
 	function capValue(){
 		if (location.state!=null) {
-			axiosInstane.put('/api/blog/edit/'+location.state.val._id,addData).then((res)=>{
+			axiosInstane.put('/blog/edit/'+location.state.val._id,addData).then((res)=>{
 				alert(res.data.message);
 				navigate('/blogs');
 		})
 		} else {
-			axiosInstane.post('/api/blog/addblogs',addData).then((res)=>{
+			axiosInstane.post('/blog/addblogs',addData).then((res)=>{
 				alert(res.data.message);
 				navigate('/blogs');
 			})

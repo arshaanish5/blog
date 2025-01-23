@@ -13,7 +13,7 @@ const Home = () => {
   const [cardData,setData]=useState([]);
   const navigate=useNavigate();
   useEffect(() => {
-    axiosInstane.get('/api/blog/blogs')
+    axiosInstane.get('/blog/blogs')
       .then((res) => {
         setData(res.data);  // Set the fetched data to state
         console.log(res.data);  // Optionally log the data for debugging

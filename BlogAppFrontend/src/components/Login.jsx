@@ -12,7 +12,7 @@ const Login = () => {
 	const navigate=useNavigate();
 	function capValue(){
 		// console.log(form)
-		axiosInstane.post('/api/user/login',form).then((res)=>{
+		axios.post('/api/user/login',form).then((res)=>{
 			alert(res.data.message);
 			// console.log(res)
 			if(res.data.token){
