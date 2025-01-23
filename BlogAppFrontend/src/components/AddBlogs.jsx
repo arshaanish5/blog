@@ -13,7 +13,7 @@ const AddBlogs = () => {
 	const navigate=useNavigate();
 	const location=useLocation();
 	function capValue(blogData){
-		axiosInstane.post('/api/blog/addblogs', blogData)
+		axios.post('/api/blog/addblogs', blogData)
         .then((res) => {
             alert(res.data.message); // Success message from the server
             navigate('/blogs'); // Navigate to the blogs page
@@ -36,12 +36,12 @@ const AddBlogs = () => {
 	},[])
 	function capValue(){
 		if (location.state!=null) {
-			axiosInstane.put('/api/blog/edit/'+location.state.val._id,addData).then((res)=>{
+			axios.put('/api/blog/edit/'+location.state.val._id,addData).then((res)=>{
 				alert(res.data.message);
 				navigate('/blogs');
 		})
 		} else {
-			axiosInstane.post('/api/blog/addblogs',addData).then((res)=>{
+			axios.post('/api/blog/addblogs',addData).then((res)=>{
 				alert(res.data.message);
 				navigate('/blogs');
 			})
