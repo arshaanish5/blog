@@ -28,7 +28,7 @@ const Home = () => {
     navigate('/addblogs', { state: { val } });
   }
   function delete_data(id) {
-		axiosInstane.delete(`/api/blog/delete/${id}`)
+		axiosInstane.delete(`/blog/delete/${id}`)
 		  .then((res) => {
 			// After successful deletion, remove the item from the state
 			setData(prevData => prevData.filter(item => item._id !== id));

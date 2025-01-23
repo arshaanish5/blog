@@ -1,6 +1,6 @@
 import axios from "axios";
 const axiosInstane=axios .create({
-	baseURL:'/api',
+	baseURL:'/api/',
 })
 axiosInstane.interceptors.request.use((config)=>{
 	const accessToken=sessionStorage.getItem('logintoken')
